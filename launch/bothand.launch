@@ -1,0 +1,11 @@
+<launch>
+
+<arg name="world" default="$(find bothand)/worlds/arena.world"/>
+
+ <env name="GAZEBO_MODEL_PATH" value="${GAZEBO_MODEL_PATH}:$(find bothand)/models"/>
+
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+ <arg name="world_name" value="$(arg world)"/>
+ </include>
+ 
+</launch>
